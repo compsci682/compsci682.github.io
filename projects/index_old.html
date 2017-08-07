@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://vision.stanford.edu/teaching/cs231n/project.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COMPSCI697L Deep Learning</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap-theme.min.css">
+
+  <!-- Google fonts -->
+  <link href="./css" rel="stylesheet" type="text/css">
+
+  <!-- Google Analytics -->
+  <script async="" src="./analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46895817-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="./style.css">
+
+  <style>
+  .hh {
+    margin: 10px 0px 10px 0px;
+    border-bottom: 1px solid #881c1c;
+    color: #881c1c;
+  }
+  </style>
+</head>
+
+<body>
+
+<!--
+<div id="header">
+  <a href="http://vision.stanford.edu/">
+    <img src="./visionlablogo.png" style="height:50px; float: left; margin-left: 20px;">
+  </a>
+  <a href="http://stanford.edu/">
+    <img src="./stanfordlogo.jpg" style="height:50px; float: right; margin-right: 20px;">
+  </a>
+
+  <a href="http://vision.stanford.edu/teaching/cs231n/index.html">
+    <h1>CS231n: Convolutional Neural Networks for Visual Recognition</h1>
+  </a>
+
+  <div style="clear:both;"></div>
+</div>
+-->
+
+<div id="header">
+  <a href="http://www.umass.edu/">
+    <img src="/assets/fig/umasslogo.png" style="height:50px; float: left; margin-left: 20px;">
+  </a>
+  <!--<a href="">
+    <img src="/assets/fig/umasslogo.png" style="height:50px; float: right; margin-right: 20px;">
+  </a> -->
+  <h1 stype="text-align:center;">COMPSCI697L Deep Learning</h1>
+  <div style="clear:both;"></div>
+</div>
+
+<div style="background-color:#881c1c; color:#FFF; padding:15px;">
+<h1>Course Project</h1>
+</div>
+
+<!-- <div class="container sec">
+  Warning: Details still subject to change
+</div> -->
+
+<div class="container sec">
+  <h2>Previous Projects</h2>
+
+  Update: <a href="http://vision.stanford.edu/teaching/cs231n/reports.html">Winter Quater 2015 projects</a> have now been posted!
+  <br><br><br>
+
+  <h2>Overview</h2>
+  <p>The Course Project is an opportunity for you to apply what you have learned in class to a problem of your interest. There are two project options you can pick from:</p>
+
+    <div class="hh">Option 1: Your own project (Encouraged)</div>
+    <p>Your are encouraged to select a topic and work on your own project. Potential projects usually fall into these two tracks:</p>
+    <ul>
+      <li><strong>Applications.</strong> If you're coming to the class with a specific background and interests (e.g. biology, engineering, physics), we'd love to see you apply ConvNets to problems related to your particular domain of interest. Pick a real-world problem and apply ConvNets to solve it. </li>
+      <li><strong>Models.</strong> You can build a new model (algorithm) with ConvNets, or a new variant of existing models, and apply it to tackle vision tasks. This track might be more challenging, and sometimes leads to a piece of publishable work.</li>
+    </ul>
+
+    <p>
+    One <b>restriction</b> to note is that this is a Computer Vision class, so your project should involve pixels of visual data in some form somewhere. E.g. a pure NLP project is not a good choice, even if your approach involves ConvNets.
+    </p>
+
+
+    <p>To inspire ideas, you might look at recent deep learning publications from top-tier vision conferences, as well as other resources below.</p>
+    <ul>
+      <li><a href="https://github.com/kjw0612/awesome-deep-vision">Awesome Deep Vision</a></li>
+      <li><a href="http://www.pamitc.org/cvpr14/accepted_papers.php">CVPR</a>: IEEE Conference on Computer Vision and Pattern Recognition</li>
+      <li><a href="http://www.cvpapers.com/iccv2013.html">ICCV</a>: International Conference on Computer Vision</li>
+      <li><a href="http://eccv2014.org/accepted-papers/">ECCV</a>: European Conference on Computer Vision</li>
+      <li><a href="http://nips.cc/Conferences/2014/Program/accepted-papers.php">NIPS</a>: Neural Information Processing Systems</li>
+      <li><a href="http://openreview.net/venue/iclr2014">ICLR</a>: International Conference on Learning Representations</li>
+      <li><a href="http://cs229.stanford.edu/projects2013.html">Past CS229 Projects</a>: Example projects from Stanford machine learning class</li>
+      <li><a href="http://www.kaggle.com/">Kaggle challenges</a>: An online machine learning competition website. For example, a <a href="https://www.kaggle.com/c/yelp-restaurant-photo-classification">Yelp classification challenge</a>.</li>
+    </ul>
+    <p>For applications, this type of projects would involve careful data preparation, an appropriate loss function, details of training and cross-validation and good test set evaluations and model comparisons. Don't be afraid to think outside of the box. Some successful examples can be found below:</p>
+      <ul>
+        <li><a href="http://arxiv.org/abs/1412.3409">Teaching Deep Convolutional Neural Networks to Play Go</a></li>
+        <li><a href="http://arxiv.org/abs/1312.5602">Playing Atari with Deep Reinforcement Learning</a></li>
+        <li><a href="http://blog.kaggle.com/2014/04/18/winning-the-galaxy-challenge-with-convnets/">Winning the Galaxy Challenge with convnets</a>
+        <!-- <li><a href="http://benanne.github.io/2014/08/05/spotify-cnns.html">Recommending music on Spotify with deep learning</a></li> -->
+      </li></ul>
+      ConvNets also run in real time on mobile phones and Raspberry Pi's - feel free to go the embedded way. You may find <a href="https://github.com/jetpacapp/DeepBeliefSDK">DeepBeliefSDK</a> helpful. This particular project might be slightly out of date, but it may help you find more like it.<p></p>
+    <p>For models, ConvNets have been successfully used in a variety of computer vision tasks. This type of projects would involve understanding the state-of-the-art vision models, and building new models or improving existing models for a vision task. The list below presents some papers on recent advances of ConvNets in the computer vision community.</p>
+    <ul>
+      <li><strong>Object recognition</strong>: <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">[Krizhevsky et al.]</a>, <a href="http://arxiv.org/abs/1409.0575">[Russakovsky et al.]</a>, <a href="http://arxiv.org/abs/1409.4842">[Szegedy et al.]</a>, <a href="http://arxiv.org/abs/1409.1556">[Simonyan et al.]</a>, <a href="http://arxiv.org/abs/1406.4729">[He et al.]</a></li>
+      <li><strong>Object detection</strong>: <a href="http://arxiv.org/abs/1311.2524">[Girshick et al.]</a>, <a href="http://arxiv.org/abs/1312.6229">[Sermanet et al.]</a>, <a href="http://arxiv.org/abs/1312.2249">[Erhan et al.]</a></li>
+      <li><strong>Image segmentation</strong>: <a href="http://arxiv.org/abs/1411.4038">[Long et al.]</a></li>
+      <li><strong>Video classification</strong>: <a href="http://cs.stanford.edu/people/karpathy/deepvideo/">[Karpathy et al.]</a>, <a href="http://arxiv.org/abs/1406.2199">[Simonyan and Zisserman]</a></li>
+      <li><strong>Scene classification</strong>: <a href="http://places.csail.mit.edu/">[Zhou et al.]</a></li>
+      <li><strong>Face recognition</strong>: <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf">[Taigman et al.]</a></li>
+      <li><strong>Depth estimation</strong>: <a href="http://www.cs.nyu.edu/~deigen/depth/">[Eigen et al.]</a></li>
+      <li><strong>Image-to-sentence generation</strong>: <a href="http://cs.stanford.edu/people/karpathy/deepimagesent/">[Karpathy and Fei-Fei]</a>, <a href="http://arxiv.org/abs/1411.4389">[Donahue et al.]</a>, <a href="http://arxiv.org/abs/1411.4555">[Vinyals et al.]</a></li>
+      <li><strong>Visualization and optimization</strong>: <a href="http://arxiv.org/pdf/1312.6199v4.pdf">[Szegedy et al.]</a>, <a href="http://arxiv.org/abs/1412.1897">[Nguyen et al.]</a>, <a href="http://arxiv.org/abs/1311.2901">[Zeiler and Fergus]</a>, <a href="http://arxiv.org/abs/1412.6572">[Goodfellow et al.]</a>, <a href="http://arxiv.org/abs/1312.6055">[Schaul et al.]</a></li>
+    </ul>
+    <p>You are welcome to come to our office hours to brainstorm and suggest your project ideas. We also provide a list of popular computer vision datasets:</p>
+
+    <p>
+      </p><ul>
+        <li><a href="http://www.cvpapers.com/datasets.html">Meta Pointer: A large collection organized by CV Datasets.</a></li>
+        <li><a href="http://riemenschneider.hayko.at/vision/dataset/">Yet another Meta pointer</a></li>
+        <li><a href="http://http//image-net.org/">ImageNet</a>: a large-scale image dataset for visual recognition organized by <a href="http://wordnet.princeton.edu/">WordNet</a> hierarchy</li>
+        <li><a href="http://groups.csail.mit.edu/vision/SUN/">SUN Database</a>: a benchmark for scene recognition and object detection with annotated scene categories and segmented objects</li>
+        <li><a href="http://places.csail.mit.edu/">Places Database</a>: a scene-centric database with 205 scene categories and 2.5 millions of labelled images</li>
+        <li><a href="http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html">NYU Depth Dataset v2</a>: a RGB-D dataset of segmented indoor scenes</li>
+        <li><a href="http://mscoco.org/">Microsoft COCO</a>: a new benchmark for image recognition, segmentation and captioning</li>
+        <li><a href="http://yahoolabs.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images">Flickr100M</a>: 100 million creative commons Flickr images</li>
+        <li><a href="http://vis-www.cs.umass.edu/lfw/">Labeled Faces in the Wild</a>: a dataset of 13,000 labeled face photographs</li>
+        <li><a href="http://human-pose.mpi-inf.mpg.de/">Human Pose Dataset</a>: a benchmark for articulated human pose estimation</li>
+        <li><a href="http://www.cs.tau.ac.il/~wolf/ytfaces/">YouTube Faces DB</a>: a face video dataset for unconstrained face recognition in videos</li>
+        <li><a href="http://crcv.ucf.edu/data/UCF101.php">UCF101</a>: an action recognition data set of realistic action videos with 101 action categories</li>
+        <li><a href="http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/">HMDB-51</a>: a large human motion dataset of 51 action classes</li>
+      </ul>
+    <p></p>
+
+    <div class="hh">Option 2: Tiny ImageNet Challenge</div>
+    <p>If you are unable to come up with a project idea, you can fall back to working on the Tiny ImageNet Challenge which we will run similar to the ImageNet challenge. The goal of the challenge will be for you to do as well as possible on the Image Classification problem. You will submit your final predictions on a test set to our evaluation server and we will maintain a class leaderboard.</p>
+    <p>
+      </p><ul>
+        <li><a href="http://cs231n.stanford.edu/tiny-imagenet-200.zip">Tiny ImageNet dataset</a></li>
+        <li><a href="https://tiny-imagenet.herokuapp.com/">Evaluation server</a></li>
+      </ul>
+    <p></p>
+
+  <h2>Important Dates</h2>
+
+  Course project proposal: due January 30.<br>
+  Course project milestone: due February 17.<br>
+  The poter session will be held 2-5pm at Gates (AT&amp;T patio) on March 9.<br>
+  Final course project: due <b>March 13</b> (11:59pm).<br><br>
+
+  <h2>Grading Policy</h2>
+  <pre>  Final Project: 40%
+  milestone: 5%
+  write-up: 10%
+   •  clarity, structure, language, references: 3%
+   •  background literature survey, good understanding of the problem: 3%
+   •  good insights and discussions of methodology, analysis, results, etc.: 4%
+  technical: 12%
+   •  correctness: 4%
+   •  depth: 4%
+   •  innovation: 4%
+  evaluation and results: 10%
+   •  sound evaluation metric: 3%
+   •  thoroughness in analysis and experimentation: 3%
+   •  results and performance: 4%
+  poster: 3% (+2% bonus for best few posters)
+ </pre>
+
+  <h2>Project Proposal</h2>
+  The project proposal should be one paragraph (200-400 words). If you work on your own project, your proposal should contain:
+  <p>
+  </p><ul>
+    <li>
+    What is the problem that you will be investigating? Why is it interesting?
+    </li>
+    <li>
+    What data will you use? If you are collecting new datasets, how do you plan to collect them?
+    </li>
+    <li>
+    What method or algorithm are you proposing? If there are existing implementations, will you use them and how? How do you plan to improve or modify such implementations?
+    </li>
+    <li>
+    What reading will you examine to provide context and background?
+    </li>
+    <li>
+    How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g. plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or compare your results (e.g. what performance metrics or statistical tests)?
+    </li>
+  </ul>
+<p></p>
+
+  If you choose to work on Tiny ImageNet Challenge, emphasize the last three bullet points on the list above. Each group should send a plain-text email (subject: <strong>[cs231n] project proposal + your SUNet Ids</strong>) of your project proposal to <a href="mailto:cs231n-winter1516-staff@lists.stanford.edu">cs231n-winter1516-staff@lists.stanford.edu</a>. Don't attach any files (such as Word, PDF, etc.). Please have your teammate cc'ed if any. If your proposed project is joint with
+another class' project (with the consent of the other class' instructor), make this clear in the proposal.
+
+  <h2>Project Milestone</h2>
+  Your project milestone report should be between 2 - 3 pages using the <a href="http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip">provided template</a>. The following is a suggested structure for your report:
+  <p>
+    </p><ul>
+      <li>Title, Author(s)</li>
+      <li>Introduction: this section introduces your problem, and the overall plan for approaching your problem</li>
+      <li>Problem statement: Describe your problem precisely specifying the dataset to be used, expected results and evaluation</li>
+      <li>Technical Approach: Describe the methods you intend to apply to solve the given problem</li>
+      <li>
+      Intermediate/Preliminary Results: State and evaluate your results upto the milestone
+      </li>
+    </ul>
+  <p></p>
+  <p>
+    <strong>Submission</strong>: Please upload a PDF file named <code>&lt;your SUNet ID&gt;_milestone.pdf</code> to the assignments tab on <a href="https://coursework.stanford.edu/">coursework</a>. Note that, each individual in a team is required to make submission (i.e. the same PDF) for grading purpose. The late days are counted by the timestamp of the last submission in the team.
+  </p>
+
+  <h2>Final Submission</h2>
+  Your final write-up should be between <b>6 - 8</b> pages using the <a href="http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip">provided template</a>. After the class, we will post all the final reports online so that you can read about each others' work. If you do not want your writeup to be posted online, then please let us know at least a week in advance of the final writeup submission deadline.
+
+  <br><br>
+  Submit your final submission through <b>CourseWork</b>. You will submit one or two files:
+  <ol>
+    <li>A pdf file of your final report</li>
+    <li>(OPTIONAL) zip file (or pdf file) with Supplementary Materials</li>
+  </ol>
+
+  <br>
+  <b>Report</b>. The following is a suggested structure for the report:
+  <ul>
+  <li>Title, Author(s)</li>
+  <li>Abstract: It should not be more than 300 words</li>
+  <li>Introduction: this section introduces your problem, and the overall plan for approaching your problem</li>
+  <li>Background/Related Work: This section discusses relevant literature for your project</li>
+  <li>Approach: This section details the framework of your project. Be specific, which means you might want to include equations, figures, plots, etc</li>
+  <li>Experiment: This section begins with what kind of experiments you're doing, what kind of dataset(s) you're using, and what is the way you measure or evaluate your results. It then shows in details the results of your experiments. By details, we mean both quantitative evaluations (show numbers, figures, tables, etc) as well as qualitative results (show images, example results, etc).</li>
+  <li>Conclusion: What have you learned? Suggest future ideas.</li>
+  <li>References: This is absolutely necessary.</li>
+  </ul>
+
+  <br>
+  <b>Supplementary Material</b> is not counted toward your 6-8 page limit.
+
+  <br>Examples of things to put in your supplementary material:
+  <ul>
+    <li>Source code (if your project proposed an algorithm, or code that is relevant and important for your project.).</li>
+    <li>Cool videos, interactive visualizations, demos, etc.</li>
+  </ul>
+  Examples of things to not put in your supplementary material:
+  <ul>
+    <li>All of Caffe source code.</li>
+    <li>Various ordinary data preprocessing scripts.</li>
+    <li>Any code that is larger than 1MB.</li>
+    <li>Model checkpoints.</li>
+    <li>A computer virus.</li>
+  </ul>
+
+  <h2>Poster Session</h2>
+  We will hold a poster session in which you will present the results of your projects is form of a poster. The poster session will happen on March 9th, 2:00-5:00pm, at AT&amp;T patio (the lawn behind Gates building). Poster boards and easels will be provided.
+
+  <h2>Example Project Reports</h2>
+  Your project reports should structure like a computer vision conference paper (CVPR, ECCV, ICCV, etc.). You can find publications from Stanford Vision Lab from <a href="http://vision.stanford.edu/publications.html">here</a>. In addition, you may also take a look at some previous projects from other Stanford CS classes, such as <a href="http://web.stanford.edu/class/cs221/sample-projects/">CS221</a>, <a href="http://cs229.stanford.edu/projects2013.html">CS229</a> and <a href="http://web.stanford.edu/class/cs224w/projects.html">CS224W</a>
+
+  <h2>Collaboration Policy</h2>
+  You can work in teams of up to <strong>3</strong> people (note: in 2015 this was 2, we're changing this to 3 in 2016). We do expect that projects done with 3 people have more impressive writeup and results than projects done with 2 people. To get a sense for the scope and expectations for 2-people projects have a look at project reports from the last year.
+
+  <h2>Honor Code</h2>
+  You may consult any papers, books, online references, or publicly available implementations for ideas and code that you may want to incorporate into your strategy or algorithm, so long as you clearly cite your sources in your code and your writeup. However, under no circumstances may you look at another group’s code or incorporate their code into your project.
+
+  <br><br>
+  If you are doing a similar project for another class, you must make this clear and write down the exact portion of the project that is being counted for CS231n.
+
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="./jquery.min.js"></script>
+<script src="./bootstrap.min.js"></script>
+
+
+
+</body></html>

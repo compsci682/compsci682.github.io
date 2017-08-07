@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- HTML4 meta tags forcing no-caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="icon" href="favicon.ico">
+
+    <title>COMPSCI 697L Deep Learning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/offcanvas.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-custom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a class="navbar-brand" href="https://www.cics.umass.edu/">COMPSCI697L</a>-->
+          <a class="navbar-brand" href="https://www.cics.umass.edu/"><img style="max-height:15px; margin-top: 1px;"
+             src="/assets/fig/umasslogo2.png"></a>
+          <!--<a class="navbar-brand" href="#">COMPSCI697L</a>-->
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/syllabus.html">Syllabus</a></li>
+            <li><a href="/notes/">Notes</a></li>
+            <li><a href="/assignments.html">Assignments</a></li>
+            <li class="active"><a href="/projects/">Project</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+<h2>COMPSCI 697L Deep Learning</h2>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Acknowlegements</h3>
+            </div>
+            <div class="panel-body">
+                These project guidelines originally accompany the Stanford CS class <a href="http://cs231n.stanford.edu/">CS231n</a>, and are now provided here for
+                the UMass class COMPSCI 697L with minor changes reflecting our course contents. Many thanks to Fei-Fei Li and Andrej Karpathy for graciously letting us use their course materials!
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Announcements</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>All project reports are now available <a href="https://docs.google.com/spreadsheets/d/10rbnBZGXzfDGnTRM8h4Q660ZZ731RSQosZr-RqtlUhU/edit?usp=sharing">here</a>. Check out all the cool projects from your classmates!</li>
+                </ul>
+            </div>
+        </div>
+<!--
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Empty Page</h3>
+        </div>
+        <div class="panel-body">
+          Project description will be posted later in the semester.
+        </div>
+      </div>
+-->
+
+  <h2>Important Dates</h2>
+
+  Course project proposal: 11/02 (due 11:55pm on Moodle).<br>
+  Course project milestone: 11/23 (due 11:55pm on Moodle).<br>
+<!--  The poter session will be held 2-5pm at Gates (AT&amp;T patio) on March 9.<br> -->
+  Final course project write-up: <b>12/14</b> (due 11:55pm on Moodle).<br>
+
+  <h2>Overview</h2>
+  <p>The Course Project is an opportunity for you to apply what you have learned in class to a problem of your interest. There are two project options you can pick from:</p>
+
+    <div class="hh"><b>Option 1: Your own project (Encouraged)</b></div>
+    <p>Your are encouraged to select a topic and work on your own project. Potential projects usually fall into these two tracks:</p>
+    <ul>
+      <li><strong>Applications.</strong> If you're coming to the class with a specific background and interests (e.g. biology, engineering, physics), we'd love to see you apply deep neural networks to problems related to your particular domain of interest. Pick a real-world problem and apply deep neural networks to solve it. </li>
+      <li><strong>Models.</strong> You can build a new model (algorithm) with deep neural networks, or a new variant of existing models, and apply it to tackle vision tasks. This track might be more challenging, and sometimes leads to a piece of publishable work.</li>
+    </ul>
+
+    <p>Here you can find some sample project ideas professor described earlier in the class:</p>
+    <ul>
+        <li><a href="https://docs.google.com/document/d/1V_TYxxguUD_POT9PT3o5h4gnSecWHnQbfr-YpVy3V3E/edit?usp=sharing">Sample project ideas (Google Docs)</a></li>
+    </ul>
+
+    <p>To inspire ideas, you might look at recent deep learning publications from top-tier vision conferences, as well as other resources below.</p>
+    <ul>
+      <li><a href="https://github.com/kjw0612/awesome-deep-vision">Awesome Deep Vision</a></li>
+      <li><a href="http://www.cv-foundation.org/openaccess/CVPR2016.py">CVPR</a>: IEEE Conference on Computer Vision and Pattern Recognition</li>
+      <li><a href="http://www.cv-foundation.org/openaccess/ICCV2015.py">ICCV</a>: International Conference on Computer Vision</li>
+      <li><a href="http://www.eccv2016.org/main-conference/">ECCV</a>: European Conference on Computer Vision</li>
+      <li><a href="https://papers.nips.cc/book/advances-in-neural-information-processing-systems-28-2015">NIPS</a>: Neural Information Processing Systems</li>
+      <li><a href="http://nuit-blanche.blogspot.com/2016/02/iclr-2016-list-of-accepted-papers.html">ICLR</a>: International Conference on Learning Representations</li>
+      <li><a href="http://www.kaggle.com/">Kaggle challenges</a>: An online machine learning competition website. For example, a <a href="https://www.kaggle.com/c/yelp-restaurant-photo-classification">Yelp classification challenge</a>.</li>
+    </ul>
+    <p>For applications, this type of projects would involve careful data preparation, an appropriate loss function, details of training and cross-validation and good test set evaluations and model comparisons. Don't be afraid to think outside of the box. Some successful examples can be found below:</p>
+      <ul>
+        <li><a href="http://arxiv.org/abs/1412.3409">Teaching Deep Convolutional Neural Networks to Play Go</a></li>
+        <li><a href="http://arxiv.org/abs/1312.5602">Playing Atari with Deep Reinforcement Learning</a></li>
+        <li><a href="http://blog.kaggle.com/2014/04/18/winning-the-galaxy-challenge-with-convnets/">Winning the Galaxy Challenge with convnets</a>
+        <!-- <li><a href="http://benanne.github.io/2014/08/05/spotify-cnns.html">Recommending music on Spotify with deep learning</a></li> -->
+      </li></ul>
+      Deep neural networks also run in real time on mobile phones and Raspberry Pi's - feel free to go the embedded way. You may find <a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android">this TensorFlow demo on Android</a> helpful. </p>
+    <p>For models, deep neural networks have been successfully used in a variety of computer vision and NLP tasks. This type of projects would involve understanding the state-of-the-art vision or NLP models, and building new models or improving existing models. The list below presents some papers on recent advances of deep neural networks in the computer vision community.</p>
+    <ul>
+      <li><strong>Object recognition</strong>: <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">[Krizhevsky et al.]</a>, <a href="http://arxiv.org/abs/1409.0575">[Russakovsky et al.]</a>, <a href="http://arxiv.org/abs/1409.4842">[Szegedy et al.]</a>, <a href="http://arxiv.org/abs/1409.1556">[Simonyan et al.]</a>, <a href="http://arxiv.org/abs/1406.4729">[He et al.]</a></li>
+      <li><strong>Object detection</strong>: <a href="http://arxiv.org/abs/1311.2524">[Girshick et al.]</a>, <a href="http://arxiv.org/abs/1312.6229">[Sermanet et al.]</a>, <a href="http://arxiv.org/abs/1312.2249">[Erhan et al.]</a></li>
+      <li><strong>Image segmentation</strong>: <a href="http://arxiv.org/abs/1411.4038">[Long et al.]</a></li>
+      <li><strong>Video classification</strong>: <a href="http://cs.stanford.edu/people/karpathy/deepvideo/">[Karpathy et al.]</a>, <a href="http://arxiv.org/abs/1406.2199">[Simonyan and Zisserman]</a></li>
+      <li><strong>Scene classification</strong>: <a href="http://places.csail.mit.edu/">[Zhou et al.]</a></li>
+      <li><strong>Face recognition</strong>: <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Taigman_DeepFace_Closing_the_2014_CVPR_paper.pdf">[Taigman et al.]</a></li>
+      <li><strong>Depth estimation</strong>: <a href="http://www.cs.nyu.edu/~deigen/depth/">[Eigen et al.]</a></li>
+      <li><strong>Image-to-sentence generation</strong>: <a href="http://cs.stanford.edu/people/karpathy/deepimagesent/">[Karpathy and Fei-Fei]</a>, <a href="http://arxiv.org/abs/1411.4389">[Donahue et al.]</a>, <a href="http://arxiv.org/abs/1411.4555">[Vinyals et al.]</a></li>
+      <li><strong>Visualization and optimization</strong>: <a href="http://arxiv.org/pdf/1312.6199v4.pdf">[Szegedy et al.]</a>, <a href="http://arxiv.org/abs/1412.1897">[Nguyen et al.]</a>, <a href="http://arxiv.org/abs/1311.2901">[Zeiler and Fergus]</a>, <a href="http://arxiv.org/abs/1412.6572">[Goodfellow et al.]</a>, <a href="http://arxiv.org/abs/1312.6055">[Schaul et al.]</a></li>
+    </ul>
+    <p>We also provide a list of popular computer vision datasets:</p>
+
+    <p>
+      </p><ul>
+        <li><a href="http://www.cvpapers.com/datasets.html">Meta Pointer: A large collection organized by CV Datasets.</a></li>
+        <li><a href="http://riemenschneider.hayko.at/vision/dataset/">Yet another Meta pointer</a></li>
+        <li><a href="http://http//image-net.org/">ImageNet</a>: a large-scale image dataset for visual recognition organized by <a href="http://wordnet.princeton.edu/">WordNet</a> hierarchy</li>
+        <li><a href="http://groups.csail.mit.edu/vision/SUN/">SUN Database</a>: a benchmark for scene recognition and object detection with annotated scene categories and segmented objects</li>
+        <li><a href="http://places.csail.mit.edu/">Places Database</a>: a scene-centric database with 205 scene categories and 2.5 millions of labelled images</li>
+        <li><a href="http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html">NYU Depth Dataset v2</a>: a RGB-D dataset of segmented indoor scenes</li>
+        <li><a href="http://mscoco.org/">Microsoft COCO</a>: a new benchmark for image recognition, segmentation and captioning</li>
+        <li><a href="http://yahoolabs.tumblr.com/post/89783581601/one-hundred-million-creative-commons-flickr-images">Flickr100M</a>: 100 million creative commons Flickr images</li>
+        <li><a href="http://vis-www.cs.umass.edu/lfw/">Labeled Faces in the Wild</a>: a dataset of 13,000 labeled face photographs</li>
+        <li><a href="http://human-pose.mpi-inf.mpg.de/">Human Pose Dataset</a>: a benchmark for articulated human pose estimation</li>
+        <li><a href="http://www.cs.tau.ac.il/~wolf/ytfaces/">YouTube Faces DB</a>: a face video dataset for unconstrained face recognition in videos</li>
+        <li><a href="http://crcv.ucf.edu/data/UCF101.php">UCF101</a>: an action recognition data set of realistic action videos with 101 action categories</li>
+        <li><a href="http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/">HMDB-51</a>: a large human motion dataset of 51 action classes</li>
+      </ul>
+    <p></p>
+
+    <div class="hh"><b>Option 2: Tiny ImageNet Challenge</b></div>
+    <p>If you are unable to come up with a project idea, you can fall back to working on the Tiny ImageNet Challenge which we will run similar to the ImageNet challenge. The goal of the challenge will be for you to do as well as possible on the Image Classification problem. </p>
+    <p>
+      </p><ul>
+        <li><a href="http://maxwell.cs.umass.edu/hsu/697l/tiny-imagenet-200.zip">Tiny ImageNet dataset (237 MB)</a></li>
+      </ul>
+    <p>Tiny Imagenet has 200 classes. Each class has 500 training images, 50 validation images, and 50 test images. We have released the training and validation sets with images and annotations. We provide both class labels and bounding boxes as annotations; however, you are asked only to predict the class label of each image without localizing the objects. The test set is released without labels. </p>
+
+<p>We use test set error rate, the fraction of test images that are incorrectly classified by the model, to measure the performance. To submit your predictions on the test set, name your submission file as <your ID>.txt and upload it to Moodle. Your submission should be a two-column file with 10,000 lines. Each line contains a pair of test image filename and its predicted class id. </p>
+
+<p><a href="http://maxwell.cs.umass.edu/hsu/697l/chance.txt">This file</a> illustrates a submission of random guessing, giving us a chance accuracy 0.005 (1/200). Note that, the class ids correspond to synsets in ImageNet. For example, you can browse images and metadata of class id n01910747 using this <a href="http://image-net.org/synset?wnid=n01910747">link</a>.</p>
+
+  <h2>Grading Policy</h2>
+  <pre>  Final Project: 40%
+  milestone: 5%
+  write-up: 10%
+   •  clarity, structure, language, references: 3%
+   •  background literature survey, good understanding of the problem: 3%
+   •  good insights and discussions of methodology, analysis, results, etc.: 4%
+  technical: 12%
+   •  correctness: 4%
+   •  depth: 4%
+   •  innovation: 4%
+  evaluation and results: 10%
+   •  sound evaluation metric: 3%
+   •  thoroughness in analysis and experimentation: 3%
+   •  results and performance: 4%
+  poster: 3% (+2% bonus for best few posters)</pre>
+
+  <h2>Project Proposal</h2>
+  The project proposal should be one paragraph (200-400 words). If you work on your own project, your proposal should contain:
+  <p>
+  </p><ul>
+    <li>
+    Who are the (1~3) group members? What will each person do? (This need to be a separate detailed paragraph)
+    </li>
+    <li>
+    What is the problem that you will be investigating? Why is it interesting?
+    </li>
+    <li>
+    What data will you use? If you are collecting new datasets, how do you plan to collect them?
+    </li>
+    <li>
+    What method or algorithm are you proposing? If there are existing implementations, will you use them and how? How do you plan to improve or modify such implementations?
+    </li>
+    <li>
+    What reading will you examine to provide context and background?
+    </li>
+    <li>
+    How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g. plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or compare your results (e.g. what performance metrics or statistical tests)?
+    </li>
+  </ul>
+<p></p>
+
+  If you choose to work on Tiny ImageNet Challenge, emphasize the last three bullet points on the list above. Each group should submit a plain-text proposal to Moodel. If your proposed project is joint with
+another class' project (with the consent of the other class' instructor), make this clear in the proposal.
+
+  <h2>Project Milestone</h2>
+  Your project milestone report should be between 2 - 3 pages using the <a href="http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip">provided template</a>. The following is a suggested structure for your report:
+  <p>
+    </p><ul>
+      <li>Title, Author(s)</li>
+      <li>Introduction: this section introduces your problem, and the overall plan for approaching your problem</li>
+      <li>Problem statement: Describe your problem precisely specifying the dataset to be used, expected results and evaluation</li>
+      <li>Technical Approach: Describe the methods you intend to apply to solve the given problem</li>
+      <li>
+      Intermediate/Preliminary Results: State and evaluate your results upto the milestone
+      </li>
+    </ul>
+  <p></p>
+  <p>
+    <strong>Submission</strong>: Please upload a PDF file named <code>&lt;your ID&gt;_milestone.pdf</code> to Moodle. One submission for each group is sufficient.
+  </p>
+
+  <h2>Final Submission</h2>
+  Your final write-up should be between <b>4 - 8</b> pages using the <a href="http://www.pamitc.org/cvpr15/files/cvpr2015AuthorKit.zip">provided template</a>. After the class, we will post all the final reports online so that you can read about each others' work. If you do not want your writeup to be posted online, then please let us know at least a week in advance of the final writeup submission deadline.
+
+  <br><br>
+  Submit your final submission through Moodle. You will submit one or two files:
+  <ol>
+    <li>A pdf file of your final report</li>
+    <li>(OPTIONAL) zip file (or pdf file) with Supplementary Materials</li>
+  </ol>
+
+  <b>Report</b>. The following is a suggested structure for the report:
+  <ul>
+  <li>Title, Author(s)</li>
+  <li>Abstract: It should not be more than 300 words</li>
+  <li>Introduction: this section introduces your problem, and the overall plan for approaching your problem</li>
+  <li>Background/Related Work: This section discusses relevant literature for your project</li>
+  <li>Approach: This section details the framework of your project. Be specific, which means you might want to include equations, figures, plots, etc</li>
+  <li>Experiment: This section begins with what kind of experiments you're doing, what kind of dataset(s) you're using, and what is the way you measure or evaluate your results. It then shows in details the results of your experiments. By details, we mean both quantitative evaluations (show numbers, figures, tables, etc) as well as qualitative results (show images, example results, etc).</li>
+  <li>Conclusion: What have you learned? Suggest future ideas.</li>
+  <li>References: This is absolutely necessary.</li>
+  </ul>
+
+  <b>Supplementary Material</b> is not counted toward your 4-8 page limit.
+
+  <br>Examples of things to put in your supplementary material:
+  <ul>
+    <li>Source code (if your project proposed an algorithm, or code that is relevant and important for your project.).</li>
+    <li>Cool videos, interactive visualizations, demos, etc.</li>
+  </ul>
+  Examples of things to not put in your supplementary material:
+  <ul>
+    <li>All of Caffe source code.</li>
+    <li>Various ordinary data preprocessing scripts.</li>
+    <li>Any code that is larger than 1MB.</li>
+    <li>Model checkpoints.</li>
+    <li>A computer virus.</li>
+  </ul>
+
+<!--  <h2>Poster Session</h2>
+  We will hold a poster session in which you will present the results of your projects is form of a poster. The poster session will happen on March 9th, 2:00-5:00pm, at AT&amp;T patio (the lawn behind Gates building). Poster boards and easels will be provided.
+-->
+  <h2>Example Project Reports</h2>
+
+  <a href="http://vision.stanford.edu/teaching/cs231n/reports.html">Stanford CS231n 2015 (Winter) projects</a>. 
+  <br>
+
+  <h2>Computing Resources</h2>
+  Amazon offers free AWS credits for students (annually renewable). Using your link provided by the <a href="https://education.github.com/pack">GitHub Student Developer Pack</a> will get you the most free credits. 
+  <ul>
+    <li>UMass is an "AWS member institution", so you are in the higher allowance tier. Use your .edu email and the full school name "University of Massachusetts Amherst" when you register to get the full benefits (a total of $75-$150). </li>
+    <li>To get GPUs, use g2 (up to 4 NVIDIA GRID K520 GPUs) or p2 (up to 16 NVIDIA K80 GPUs) instances in EC2. Check the pricing first and make your plan accordingly!</li>
+  </ul>
+
+  <h2>Collaboration Policy</h2>
+  You can work in teams of 1~3 people. We do expect that projects done with 3 people have more impressive writeup and results than projects done with 2 people.
+
+  <h2>Honor Code</h2>
+  You may consult any papers, books, online references, or publicly available implementations for ideas and code that you may want to incorporate into your strategy or algorithm, so long as you clearly cite your sources in your code and your writeup. However, under no circumstances may you look at another group’s code or incorporate their code into your project.
+
+  <br><br>
+  If you are doing a similar project for another class, you must make this clear and write down the exact portion of the project that is being counted for COMPSCI 697L.
+<br><br>
+    </div><!--/.container-->
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-col-1 column">
+          <ul>
+            <li><a href="https://github.com/compsci697l">
+              <span class="icon github">
+                <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                  <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                  c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                  c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                  c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                  C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                  c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                  c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                  c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                  c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+              <span class="username">compsci697l</span>
+            </a>
+            </li>
+            <li>
+              <a href="mailto:compsci697l@gmail.com">compsci697l@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col-2 column">
+
+        </div>
+
+        <div class="footer-col-3 column">
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/offcanvas.js"></script>
+  </body>
+</html>

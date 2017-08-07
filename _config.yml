@@ -1,0 +1,17 @@
+# Site settings
+title: COMPSCI 697L Deep Learning
+email: compsci697l@gmail.com
+description: "Course materials and notes for UMass-Amherst class COMPSCI 697L: Deep Learning."
+baseurl: ""
+url: "http://compsci697l.github.io"
+github_username:  compsci697l
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge

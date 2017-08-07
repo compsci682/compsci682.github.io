@@ -1,0 +1,296 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+#classdesc {
+  text-align: justify;
+  font-size: 115%;
+}
+#statement {
+  text-align: justify;
+  font-size: 90%;
+}
+.instructorphoto img {
+  width: 80px;
+  border-radius: 80px;
+  margin-bottom: 10px;
+}
+.instructor {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  margin-right: 20px;
+}
+.instructor2 {
+  display: inline-block;
+  text-align: center;
+}
+
+/*
+ * navbar customization
+ *----------------------------
+ */
+.navbar-custom {
+	background-color:#881c1c;
+    color:#ffffff;
+  	border-radius:0;
+}
+.navbar-custom .navbar-nav > li > a {
+  	color:#fff;
+  	padding-left:20px;
+  	padding-right:20px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  background-color: #551111;
+}
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus, .navbar-custom .navbar-nav .open>a  {
+  background-color: #551111;
+}
+/* dropdown */
+.navbar-custom .navbar-nav .dropdown-menu  {
+  background-color: #551111;
+}
+.navbar-custom .navbar-nav .dropdown-menu>li>a  {
+  color: #fff;
+}
+.navbar-custom .navbar-nav .dropdown-menu>li>a:hover,.navbar-custom .navbar-nav .dropdown-menu>li>a:focus  {
+  color: #551111;
+}
+.navbar-custom .navbar-brand {
+  	color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+  	background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+  	background-color:#551111;
+}
+
+/*
+ * Misc style tweeks
+ * -------------------------
+ */
+h2 {
+    color: #881c1c;
+    font-size: 165%;
+}
+.jumbotron h3 {
+  color: #63666a;
+  font-size: 145%;
+}
+.jumbotron {
+  padding-top: 3px;
+  padding-bottom: 20px;
+}
+#announcetron {
+  padding-left: 25px;
+  padding-right: 0px;
+}
+#announcelist {
+  list-style-type: none;
+  position: relative;
+  left: -40px;
+  width: 110%;
+  text-align: justify;
+}
+.infoblk {
+  text-align: justify;
+}
+.btn-umass ,
+.btn-umass:active,
+.btn-umass:focus{
+  background-color: #881c1c;
+  border-color: #881c1c;
+}
+
+/*
+ * Site footer
+ * ----------------------------------
+ */
+
+.site-footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 30px 0;
+}
+.footer-heading {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  margin-bottom: 15px;
+}
+.site-footer .column { float: left; margin-bottom: 15px; }
+.footer-col-1 {
+  width: 270px; /*fallback*/
+  width: -webkit-calc(35% - 10px);
+  width: -moz-calc(35% - 10px);
+  width: -o-calc(35% - 10px);
+  width: calc(35% - 10px);
+  margin-right: 10px
+}
+.footer-col-2 {
+  width: 175px; /*fallback*/
+  width: -webkit-calc(23.125% - 10px);
+  width: -moz-calc(23.125% - 10px);
+  width: -o-calc(23.125% - 10px);
+  width: calc(23.125% - 10px);
+  margin-right: 10px
+}
+.footer-col-3 {
+  width: 335px; /*fallback*/
+  width: -webkit-calc(41.875%);
+  width: -moz-calc(41.875%);
+  width: -o-calc(41.875%);
+  width: calc(41.875%);
+}
+.site-footer ul { list-style: none; }
+.site-footer li,
+.site-footer p {
+  font-size: 15px;
+  letter-spacing: -.3px;
+  color: #828282;
+}
+.github-icon-svg,
+.twitter-icon-svg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}
+
+/* Layout Styles */
+/* ----------------------------------------------------------*/
+
+/* Custom CSS rules for index page */
+
+.module-header {
+  font-size: 24px;
+  color: #881c1c;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.materials-wrap {
+  font-size: 18px;
+}
+.materials-item a{
+  color: #333;
+  display: block;
+  padding: 3px;
+}
+.materials-item {
+  border-bottom: 1px solid #CCC;
+}
+.materials-item:nth-child(even) {
+  background-color: #f7f6f1;
+}
+
+/* Custom CSS rules for content */
+
+.embedded-video {
+  text-align: center;
+  background-color: #f7f6f1;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+}
+
+/* Custom CSS for pages */
+.figcenter {
+  text-align: center;
+}
+.fig img {
+  max-width: 98%;
+}
+.figleft img {
+  max-width: 50%;
+  float: left;
+  margin-right: 20px;
+}
+.figleft svg {
+  float: left;
+  margin-right: 20px;
+}
+.fighighlight {
+  /* background-color: #f7f6f1; */
+  padding: 20px 4px 20px 4px;
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+  /* box-shadow: 0px 2px 5px #CCC, 0px -2px 5px #CCC; */
+}
+.figcaption {
+  font-weight: 400;
+  font-size: 14px;
+  color: #575651;
+  text-align: justify;
+}
+
+.post-content p {
+  text-align: justify;
+}
+
+.kw {
+  font-size: 16px;
+  color: #08A;
+  margin-left: 10px;
+}
+
+.notyet {
+  background-color: #FEE !important;
+}
+
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -67%; /* 8 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -67%; /* 8 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 67%; /* 8 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 67%; /* 8 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 67%; /* 8 columns */
+  }
+}
