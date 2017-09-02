@@ -1,10 +1,10 @@
 # Site settings
-title: COMPSCI 697L Deep Learning
-email: compsci697l@gmail.com
-description: "Course materials and notes for UMass-Amherst class COMPSCI 697L: Deep Learning."
+title: "COMPSCI 682 Neural Networks: A Modern Introduction"
+email: umass.deep.learning+682@gmail.com
+description: "Course materials and notes for UMass-Amherst COMPSCI 682 Neural Networks: A Modern Introduction."
 baseurl: ""
-url: "http://compsci697l.github.io"
-github_username:  compsci697l
+url: "http://compsci682.github.io"
+github_username:  compsci682
 
 # Build settings
 markdown: kramdown
