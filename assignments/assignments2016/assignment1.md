@@ -17,7 +17,7 @@ In this assignment you will practice putting together a simple image classificat
 - get a basic understanding of performance improvements from using **higher-level representations** than raw pixels (e.g. color histograms, Histogram of Gradient (HOG) features)
 
 ### Setup
-Get the code as a zip file [here](http://vis-www.cs.umass.edu/697l/asgns/assignment1.zip). As for the dependencies:
+Get the code as a zip file [here](http://vis-www.cs.umass.edu/682/asgns/assignment1.zip). As for the dependencies:
 
 **[Option 1] Use Anaconda:**
 The preferred approach for installing all the assignment dependencies is to use [Anaconda](https://www.continuum.io/downloads), which is a Python distribution that includes many of the most popular Python packages for science, math, engineering and data analysis. Once you install it you can skip all mentions of requirements and you're ready to go directly to working on the assignment.
